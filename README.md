@@ -1,6 +1,6 @@
 <div align="center">
 
-# BotWallet
+# Botwallet
 
 **Your AI has a brain. Give it a wallet.**
 
@@ -18,7 +18,7 @@ Earn, spend, and trade USDC on Solana with human oversight and FROST threshold s
 
 ---
 
-BotWallet gives AI agents a wallet they can actually use. Your agent creates invoices, pays other agents, accesses paid APIs, and withdraws funds. You set the spending limits, approve big transactions, and see every dollar that moves.
+Botwallet gives AI agents a wallet they can actually use. Your agent creates invoices, pays other agents, accesses paid APIs, and withdraws funds. You set the spending limits, approve big transactions, and see every dollar that moves.
 
 All money is USDC on Solana. No proprietary token. No volatile crypto. 1 USDC = $1.
 
@@ -45,7 +45,7 @@ If you're using an MCP client (Claude Desktop, Cursor, Windsurf, Cline), add thi
 }
 ```
 
-Then tell your agent: *"Create a BotWallet for yourself."*
+Then tell your agent: *"Create a Botwallet for yourself."*
 
 ## What agents can do
 
@@ -82,7 +82,7 @@ botwallet fund 50.00 --reason "API costs for the week"
 Every wallet uses [FROST](https://eprint.iacr.org/2020/852) 2-of-2 threshold signatures. During wallet creation, a key generation ceremony produces two shares:
 
 - **S1** lives on the agent's machine
-- **S2** lives on BotWallet's server
+- **S2** lives on Botwallet's server
 
 The full private key never exists. Both shares must cooperate to produce a valid signature. A compromised server can't drain your wallet. A compromised agent can't either.
 
@@ -113,7 +113,7 @@ Manage everything from the [dashboard](https://app.botwallet.co).
 
 ```
 ┌─────────────┐     ┌──────────────────┐     ┌──────────┐
-│  Your Agent │────▶│  BotWallet API   │────▶│  Solana  │
+│  Your Agent │────▶│  Botwallet API   │────▶│  Solana  │
 │  (S1 key)   │     │  (S2 key + rules)│     │  (USDC)  │
 └─────────────┘     └──────────────────┘     └──────────┘
        │                     │
@@ -123,9 +123,9 @@ Manage everything from the [dashboard](https://app.botwallet.co).
         guard rails   └─────────────┘
 ```
 
-Your agent holds one key share. BotWallet holds the other. Neither can sign alone. You set the rules from the dashboard and approve anything that falls outside them.
+Your agent holds one key share. Botwallet holds the other. Neither can sign alone. You set the rules from the dashboard and approve anything that falls outside them.
 
-## Why BotWallet
+## Why Botwallet
 
 The code is open source. You can read every line that handles your agent's money.
 
@@ -133,7 +133,7 @@ It's non-custodial. Your agent's key share stays on your machine. We can't acces
 
 Transactions settle in USDC on Solana. Dollar-stable value, sub-second finality, fees under a penny. No speculative token.
 
-Any agent that can make an HTTP call can use BotWallet. There's a CLI, an MCP server, a REST API, and a TypeScript SDK.
+Any agent that can make an HTTP call can use Botwallet. There's a CLI, an MCP server, a REST API, and a TypeScript SDK.
 
 No setup fees. You pay only when your agent moves money.
 
